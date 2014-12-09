@@ -1,2 +1,6 @@
 # Ignore the Jekyll generated site directory
 _site
+
+# Ignore Ruby Gem stuff for now, only required for local Jekyll.
+Gemfile
+Gemfile.lock
