@@ -1,0 +1,30 @@
+---
+title: GitHub pages for instant publishing
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include header.html %}
+
+<body role="document">
+    {% include navbar.html nav=site.data.navbar %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>GitHub Pages for convenience</h1>
+            <p>The site uses <a href="https://pages.github.com/">GitHub pages</a> as a convenient publishing and revision control platform. There's a couple of key resources below.</p>
+        </div>
+        <div class="page-header">
+            <h1>Getting started with pages</h1>
+        </div>
+        <p>
+            This is the pages site for the <a href="http://github.com/verapdf">VeraPDF GitHub Organisation</a> and isn't associated with a particular software project. The content for the site is generated from the <code>master</code > branch of a specially named GitHub repo <a href="https://github.com/verapdf/verapdf.github.io">https://github.com/verapdf/verapdf.github.io</a>. The only purpose of this repo is to produce this site. GitHub pages also supports custom sub-domains so the URL can be whatever we wish.
+        </p>
+        <p>
+            For the GitHub pages basics read <a href="https://help.github.com/categories/github-pages-basics/">these posts</a>, none of them are long. Anyone with permission can check out the repo make changes and check them back in, it only takes a few seconds to publish.
+        </p>
+        <p>
+            Although the site is static it's generated using <a href="http://jekyllrb.com/">Jekyll</a> a ruby utility that processes text content with some templating magic. With loops, variables and basic data support you can get quite a long way with Jekyll.
+        </p>
+    </div>
+    {% include footer.html %}
+</body>
+</html>
