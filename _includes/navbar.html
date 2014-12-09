@@ -18,7 +18,7 @@
             {% else %}
 		    <li>
             {% endif %}
-        		<a href="{{ item.url }}">{{ item.text }}</a>
+        		<a href="{{ site.url }}{{ item.url }}">{{ item.text }}</a>
     		</li>
     {% if item.subitems and navurl contains item.url %}
         {% include nav.html nav=item.subitems %}
