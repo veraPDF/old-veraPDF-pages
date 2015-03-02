@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd" >
+<tmx version="1.4">
+	<header creationtool="TMX Editor" 
+		creationtoolversion="1.0.1" 
+		srclang="en-US" 
+		adminlang="en"
+		datatype="plaintext" 
+		o-tmf="unknown" 
+		segtype="sentence" 
+		creationid="VeraPDF"
+		creationdate="20150107T150005Z">
+	</header>
+	<body>
+		<tu>
+			<prop type="ID">STR_ID_305</prop>
+			<prop type="Type">Message</prop>
+			<tuv xml:lang="en-US">
+				<seg>The document catalog dictionary shall not contain a key with the name OCProperties</seg>
+			</tuv>
+			<tuv xml:lang="de-DE">
+				<seg>{text in German}</seg>
+			</tuv>
+			<tuv xml:lang="fr-FR">
+				<seg>{text in French}</seg>
+			</tuv>
+		</tu>
+		<tu>
+			<prop type="ID">STR_ID_118</prop>
+			<prop type="Type">Message</prop>
+			<tuv xml:lang="en-US">
+				<seg>The value of the %1 metadata entry is not consistent: the document information dictionary contains the value '%2' and the document XMP metadata contains the value '%3'</seg>
+			</tuv>
+			<tuv xml:lang="de-DE">
+				<seg>{text in German}</seg>
+			</tuv>
+			<tuv xml:lang="fr-FR">
+				<seg>{text in French}</seg>
+			</tuv>
+		</tu>
+		<tu>
+			<prop type="ID">STR_ID_402</prop>
+			<prop type="Type">Argument</prop>
+			<tuv xml:lang="en-US">
+				<seg>title</seg>
+			</tuv>
+			<tuv xml:lang="de-DE">
+				<seg>{text in German}</seg>
+			</tuv>
+			<tuv xml:lang="fr-FR">
+				<seg>{text in French}</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

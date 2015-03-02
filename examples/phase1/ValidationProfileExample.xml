@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile xmlns="http://www.verapdf.org/ValidationProfile" model="org.verapdf.model.PDFA1a">
+    <name>PDF/A-1a validation profile</name>
+    <description>STR_ID_101</description>
+    <creator>User1</creator>
+    <created>2015-01-23T17:30:15Z</created>
+    <hash>sha-1 hash code</hash>
+    <imports>
+        <!--imports of other validation profiles-->
+    </imports>
+    <rules>
+        <!--definitions of all the rules which shall be applied during validation-->
+        <!--definition of a rule includes:
+            - description
+            - test condition that is expressed according to the validation model
+            - error (or warning) message (optionally with arguments) that is issued if the condition is evaluated to false
+                arguments may use the objects and their properties from the validation model to give more details about the problem
+            - reference to the relevant specification and its clause
+            - optionally descriptions of the related metadata fixes-->
+        <rule id="rule1" object="CosDocument">
+            <!--in TMX file STR_ID_401 is defined as the text: "The % character of the file header shall occur at byte offset 0 of the file."-->
+            <description>STR_ID_401</description>
+            <test>fileHeaderOffset == 0</test>
+            <error>
+                <!--in TMX file STR_ID_402 is defined as the text: "Offset of the % character of the file header is %1 (note: value -1 means the file header is not found)."-->
+                <message>STR_ID_402</message>
+                <arguments>
+                    <!--actual offset is the argument for the message-->
+                    <argument>fileHeaderOffset</argument>
+                </arguments>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.1.2</clause>
+            </reference>
+        </rule>
+        <rule id="rule2" object="CosDocument">
+            <!--in TMX file STR_ID_403 is defined as the text: "The file header line shall be immediately followed by a comment consisting of a % character followed by at
+least four characters, each of whose encoded byte values shall have a decimal value greater than 127."-->
+            <description>STR_ID_403</description>
+            <test>isBinaryHeaderCommentPresent</test>
+            <error>
+                <!--in TMX file STR_ID_404 is defined as the text: "The comment after header field is not conforming: %1 (note: empty value means the comment is not found)."-->
+                <message>STR_ID_404</message>
+                <arguments>
+                    <!--actual comment value is the argument for the message-->
+                    <argument>binaryHeaderComment</argument>
+                </arguments>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.1.2</clause>
+            </reference>
+        </rule>
+        <rule id="rule3" object="CosTrailer">
+            <!--in TMX file STR_ID_405 is defined as the text: "The file trailer dictionary shall contain the ID keyword."-->
+            <description>STR_ID_405</description>
+            <test>ID != null</test>
+            <error>
+                <!--in TMX file STR_ID_406 is defined as the text: "The file trailer dictionary does not contain the ID keyword."-->
+                <message>STR_ID_406</message>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.1.3</clause>
+            </reference>
+        </rule>
+        <!--...-->
+        <rule id="rule25" object="PDDocument">
+            <!--in TMX file STR_ID_450 is defined as the text: "The document catalog dictionary shall not contain a key with the name OCProperties."-->
+            <description>STR_ID_450</description>
+            <test>OCProperties == null</test>
+            <error>
+                <!--in TMX file STR_ID_451 is defined as the text: "OCProperties key is present in the document catalog dictionary."-->
+                <message>STR_ID_451</message>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.1.13</clause>
+            </reference>
+        </rule>
+        <!--...-->
+        <rule id="rule35" object="PDXObject">
+            <!--in TMX file STR_ID_470 is defined as the text: "A conforming file shall not contain any reference XObjects."-->
+            <description>STR_ID_470</description>
+            <test>isReference</test>
+            <error>
+                <!--in TMX file STR_ID_471 is defined as the text: "A reference XObject was found."-->
+                <message>STR_ID_471</message>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.2.6</clause>
+            </reference>
+        </rule>
+        <!--...-->
+        <rule id="rule112" object="PDAnnot">
+            <!--in TMX file STR_ID_570 is defined as the text: "An annotation dictionary shall contain the F key. The F key’s Print flag bit shall be set to 1 and its Hidden,
+Invisible and NoView flag bits shall be set to 0."-->
+            <description>STR_ID_570</description>
+            <test>(F != null) &amp;&amp; (F_PrintFlag == 1) &amp;&amp; (F_HiddenFlag == 0) &amp;&amp; (F_InvisibleFlag == 0) &amp;&amp; (F_NoViewFlag == 0)</test>
+            <error>
+                <!--in TMX file STR_ID_571 is defined as the text: "The F key in the annotation dictionary is not conforming: key is not present or its flags are not as required. Actual flags values: Print = %1, Hidden = %2, Invisible = %3, NoView = %4."-->
+                <message>STR_ID_571</message>
+                <arguments>
+                    <!--actual flags values are the arguments for the message-->
+                    <argument>F_PrintFlag</argument>
+                    <argument>F_HiddenFlag</argument>
+                    <argument>F_InvisibleFlag</argument>
+                    <argument>F_NoViewFlag</argument>
+                </arguments>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.5.3</clause>
+            </reference>
+        </rule>
+        <!--...-->
+        <rule id="rule53" object="PDMetadata">
+            <!--metadata rule-->
+            <description>STR_ID_608</description>
+            <test>isInfoDictConsistent</test>
+            <error>
+                <message>STR_ID_609</message>
+            </error>
+            <reference>
+                <specification>ISO19005-1</specification>
+                <clause>6.7.3</clause>
+            </reference>
+            <fix>
+                <description>STR_ID_893</description>
+                <!--the message in case the fix succeeded-->
+                <info>
+                    <message>STR_ID_894</message>
+                </info>
+                <!--the message in case the fix failed-->
+                <error>
+                    <message>STR_ID_895</message>
+                </error>
+            </fix>
+        </rule>
+        <!--...-->
+    </rules>
+</profile>
+

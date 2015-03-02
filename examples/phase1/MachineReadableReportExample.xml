@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The machine-readable report consists of the four parts: general document information, processing information, PDF/A validation information and PDF file details.
+The PDF/A validation part lists all the performed checks and indicates those which revealed the violations of the PDF/A specification (and probably PDF, XMP specifications which the PDF/A specification relies on). Also the PDF/A validation information contains the description of the performed document metadata fixes (successful and failed).
+The PDF file details part contains the general information about the PDF document, the description of the document pages and resources. The amount of the information is controlled by a requested verbosity level. Also the PDF file details information contains all the XMP metadata packets in the original form.
+The report namespace is defined by URI 'http://www.verapdf.org/MachineReadableReport'.-->
+<report xmlns="http://www.verapdf.org/MachineReadableReport" creationDateTime="2014-12-07T13:20:06.419+03:00" processingTime="00:00:02.319">
+    <documentInfo>
+        <!--general information about the verified PDF document-->
+        <fileName>Test.pdf</fileName>
+        <filePath>C:/Users/TestUser/AppData/Local/Temp/Test.pdf</filePath>
+        <size>1024000</size>
+        <title>The document title</title>
+        <author>The document author</author>
+        <subject>The document subject</subject>
+        <keywords>keyword1, keyword2</keywords>
+        <creator>The document creator</creator>
+        <producer>The document producer</producer>
+        <creationDate>2014-11-23T15:41:28.018+03:00</creationDate>
+        <modificationDate>2014-11-30T21:08:11.397+03:00</modificationDate>
+        <pdfVersion>1.5</pdfVersion>
+        <numOfPages>2</numOfPages>
+        <!--more details about the page boxes (Media/Crop/Trim/Bleed/Art boxes) as well as rotation and scaling factor for each page specifically can be found in PDF file details section-->
+        <maxPageSize width="210.001652" height="296.999959" unit="mm"/>
+        <tagged>false</tagged>
+        <linearized>true</linearized>
+        <!--more details about the encryption and restrictions in PDF file details section-->
+        <encrypted>true</encrypted>
+        <trapped>unknown</trapped>
+        <language>unknown</language>
+        <hash>sha-1 hash code of the PDF document</hash>
+    </documentInfo>
+    <processingInfo>
+        <!--environment and configuration information for the performed document validation task-->
+        <installationConfig>
+            <!--information about the software and the environment-->
+            <libraryVersion>1.0.2</libraryVersion>
+            <shellVersion>2.0</shellVersion>
+            <javaVersion>1.7.0_75</javaVersion>
+            <operatingSystem>Microsoft Windows  Service Pack 1 (Build 7601)</operatingSystem>
+            <userName>TestUser</userName>
+            <hostName>Host1</hostName>
+            <tempDir>C:/Users/TestUser/AppData/Local/Temp</tempDir>
+            <homeDir>C:/Users/TestUser</homeDir>
+        </installationConfig>
+        <taskConfig>
+            <!--configuration settings controlling software behaviour, these are reusable across executions and installations-->
+            <pdfaFlavor>1a</pdfaFlavor>
+            <fixMetadata>true</fixMetadata>
+            <collectDetails verbosity="5">true</collectDetails>
+            <reportProgress>stdout</reportProgress>
+            <stopAfterErrors>10</stopAfterErrors>
+        </taskConfig>
+        <executionConfig>
+            <!--configuration settings unique to a particular validation task-->
+            <documentOrigin>https://verapdf.org/Test.pdf</documentOrigin>
+            <output>C:/TestFiles/TestFixed.pdf</output>
+            <report>C:/TestFiles/TestReport.xml</report>
+        </executionConfig>
+    </processingInfo>
+    <validationInfo>
+        <!--information about the performed validation-->
+        <profile>
+            <name>PDF/A-1a validation profile</name>
+            <hash>sha-1 hash code of the profile</hash>
+        </profile>
+        <result>
+            <!--results of the performed validation-->
+            <compliant>false</compliant>
+            <!--textual statement indicating validation result; for example: "The PDF document is not compliant with PDF/A-1a"-->
+            <statement>STR_ID_04</statement>
+            <summary passedRules="215" failedRules="2" passedChecks="3097" failedChecks="2" completedMetadataFixes="1" failedMetadataFixes="1"  warnings="5"/>
+            <details>
+                <!--details about the performed checks of the rules from the validation profile and the related metadata fixes-->
+                <rules>
+                    <!--list of all applied rules with their statuses-->
+                    <!--depending on its type a rule may be applied several times in different places of the document (for example, rule like "A stream object dictionary-->
+                    <!--does not contain the F key") so the checks of a particular rule are reported; each check indicates its status (passed/failed) and location-->
+                    <!--the status of the rule is derived from the statuses of its checks: all must pass in order to have "passed" state for the rule-->
+                    <rule id="rule1" status="passed" checks="1">
+                        <check status="passed">
+                            <!--possible check location levels: "document", "page"; in case of "document" level the only possible nested element is 'metadataPath'-->
+                            <location level="page">
+                                <!--location of the check according to the validation model: number of indirect PDF object and the validation context-->
+                                <context object="11">context</context>
+                                <!--location of the check in the document (page id in the report, related resource id in the PDF file details report, bounding box, XMP location path)-->
+                                <page id="page1"/>
+                                <resource>
+                                    <font id="f1"/>
+                                </resource>
+                                <bbox llx="100" lly="50" urx="200" ury="70"/>
+                                <!--if the check is somehow related to XMP metadata of the document or resource (as indicated by 'level' attribute and 'resource' element)-->
+                                <!--then 'metadataPath' element may be present and provide the XMP location path to the relevant metadata field in corresponding XMP packet-->
+                                <metadataPath>xmp:TestKey</metadataPath>
+                            </location>
+                        </check>
+                    </rule>
+                    <rule id="rule2" status="passed" checks="2">
+                        <check status="passed">
+                            <location level="document"/>
+                            <!--a rule check may issue a warning message that does not indicate a violation of PDF/A specification, but rather a notification-->
+                            <!--warning message specifies string id that can be used to find the exact text for the message in a language pack-->
+                            <warning>STR_ID_17</warning>
+                        </check>
+                        <check status="passed">
+                            <location level="document"/>
+                            <warning>STR_ID_18</warning>
+                        </check>
+                    </rule>
+                    <rule id="rule3" status="passed" checks="2">
+                        <check status="passed">
+                            <location level="page">
+                                <context object="19">context</context>
+                                <page id="page2"/>
+                                <resource>
+                                    <graphicsState id="gs1"/>
+                                </resource>
+                                <bbox llx="278" lly="133" urx="581" ury="153"/>
+                            </location>
+                        </check>
+                        <check status="passed">
+                            <location level="page">
+                                <context object="19">context</context>
+                                <page id="page2"/>
+                                <resource>
+                                    <graphicsState id="gs1"/>
+                                </resource>
+                                <bbox llx="278" lly="233" urx="581" ury="253"/>
+                            </location>
+                        </check>
+                    </rule>
+                    <!--...-->
+                    <!--failed rule-->
+                    <rule id="rule12" status="failed" checks="1">
+                        <check status="failed">
+                            <!--error message explains the reason why the check failed-->
+                            <error>STR_ID_305</error>
+                            <location level="page">
+                                <context object="270">context</context>
+                                <page id="page2"/>
+                                <resource>
+                                    <font id="f2"/>
+                                </resource>
+                                <bbox llx="241" lly="90" urx="321" ury="180"/>
+                            </location>
+                        </check>
+                    </rule>
+                    <!--...-->
+                    <!--another failed rule with warning and failed metadata fix attempt in the third check-->
+                    <rule id="rule53" status="failed" checks="4">
+                        <check status="passed">
+                            <location level="document">
+                                <metadataPath>dc:title</metadataPath>
+                            </location>
+                        </check>
+                        <check status="passed">
+                            <location level="document">
+                                <metadataPath>pdf:Keywords</metadataPath>
+                            </location>
+                            <!--message provides the details about the performed metadata fix-->
+                            <fix status="completed">STR_ID_201</fix>
+                        </check>
+                        <check status="failed">
+                            <error>STR_ID_126</error>
+                            <location level="document">
+                                <metadataPath>pdf:Producer</metadataPath>
+                            </location>
+                            <!--there was the attempt to make check "passed" by fixing metadata, but this failed; message specifies the reason of the metadata fix fail-->
+                            <fix status="failed">STR_ID_309</fix>
+                        </check>
+                        <!--passed check with completed metadata fix-->
+                        <check status="passed">
+                            <location level="document">
+                                <metadataPath>xmp:CreateDate</metadataPath>
+                            </location>
+                            <!--warning message is about some other check-related issue-->
+                            <warning>STR_ID_70</warning>
+                        </check>
+                    </rule>
+                    <!--...-->
+                    <rule id="rule217" status="passed" checks="1">
+                        <check status="passed">
+                            <location level="page">
+                                <context object="2791">context</context>
+                                <page id="page1"/>
+                                <resource>
+                                    <image id="im1"/>
+                                </resource>
+                                <bbox llx="548" lly="467" urx="611" ury="701"/>
+                            </location>
+                        </check>
+                    </rule>
+               </rules>
+                <warnings>
+                    <!--other warnings not related a specific rule-->
+                    <warning>STR_ID_115</warning>
+                    <warning>STR_ID_179</warning>
+                </warnings>
+            </details>
+        </result>
+    </validationInfo>
+    <pdfFeatures>
+        <!--PDF file description including document, pages and resources details, metadata-->
+        <!--document information dictionary content-->
+        <informationDict>
+            <entry key="Title">The document title</entry>
+            <entry key="Author">The document author</entry>
+            <entry key="Subject">The document subject</entry>
+            <entry key="Keywords">keyword1, keyword2</entry>
+            <entry key="Creator">The document creator</entry>
+            <entry key="Producer">The document producer</entry>
+            <entry key="CreationDate">2014-11-23T15:41:28.018+03:00</entry>
+            <entry key="ModDate">2014-11-30T21:08:11.397+03:00</entry>
+            <entry key="CustomKey1">CustomValue1</entry>
+            <entry key="CustomKey2">CustomValue2</entry>
+        </informationDict>
+        <!--document metadata stream content (document-level XMP packet)-->
+        <metadata>
+            <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2010/09/27-13:37:26        ">
+               <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <rdf:Description rdf:about=""
+                        xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+                     <xmp:CreatorTool>The document creator</xmp:CreatorTool>
+                     <xmp:ModifyDate>2014-11-30T21:08:11.397+03:00</xmp:ModifyDate>
+                     <xmp:CreateDate>2014-11-23T15:41:28.018+03:00</xmp:CreateDate>
+                  </rdf:Description>
+                  <rdf:Description rdf:about=""
+                        xmlns:dc="http://purl.org/dc/elements/1.1/">
+                     <dc:format>application/pdf</dc:format>
+                     <dc:title>
+                        <rdf:Alt>
+                           <rdf:li xml:lang="x-default">The document title</rdf:li>
+                        </rdf:Alt>
+                     </dc:title>
+                     <dc:creator>
+                        <rdf:Seq>
+                           <rdf:li>The document author</rdf:li>
+                        </rdf:Seq>
+                     </dc:creator>
+                  </rdf:Description>
+                  <rdf:Description rdf:about=""
+                        xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+                     <pdf:Producer>The document producer</pdf:Producer>
+                  </rdf:Description>
+                  <rdf:Description rdf:about=""
+                        xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
+                     <xmpMM:DocumentID>uuid:7dbb3659-a55e-45b8-8eb1-f2bc926878f2</xmpMM:DocumentID>
+                     <xmpMM:InstanceID>uuid:c35d8d5c-841c-440e-808d-ace41784c795</xmpMM:InstanceID>
+                  </rdf:Description>
+               </rdf:RDF>
+            </x:xmpmeta> 
+        </metadata>
+        <documentSecurity>
+            <!--possible values: None, All, AllExceptMetadata, OnlyFileAttachments-->
+            <encrypted>All</encrypted>
+            <!--possible values: No, Password, Certificate-->
+            <method>Password</method>
+            <openPassword>false</openPassword>
+            <permissionsPassword>true</permissionsPassword>
+            <!--possible values: No, LowResolution, HighResolution-->
+            <printingAllowed>HighResolution</printingAllowed>
+            <changesAllowed>false</changesAllowed>
+            <commentingAllowed>false</commentingAllowed>
+            <fillingSigningAllowed>true</fillingSigningAllowed>
+            <documentAssemblyAllowed>false</documentAssemblyAllowed>
+            <contentCopyingAllowed>true</contentCopyingAllowed>
+            <contentAccessibilityEnabled>true</contentAccessibilityEnabled>
+            <pageExtractionAllowed>false</pageExtractionAllowed>
+            <!--possible values: 40-bit RC4, 128-bit RC4, 128-bit AES, 256-bit AES-->
+            <level>128-bit RC4</level>
+        </documentSecurity>
+        <lowLevelInfo>
+            <indirectObjectsNumber>211</indirectObjectsNumber>
+            <documentId creationId="B6FB54F3F8554D478DC874F11DAD0F11" modificationId="C91F037F8099F24DBB3FF4532DCBEDC8"/>
+            <!--list all filters used in the document-->
+            <filters>
+                <filter name="ASCIIHexDecode"/>
+                <filter name="ASCII85Decode"/>
+                <filter name="LZWDecode"/>
+                <filter name="FlateDecode"/>
+                <filter name="RunLengthDecode"/>
+                <filter name="CCITTFaxDecode"/>
+                <filter name="JBIG2Decode"/>
+                <filter name="DCTDecode"/>
+                <filter name="JPXDecode"/>
+                <filter name="Crypt"/>
+            </filters>
+        </lowLevelInfo>
+        <!--Q: add info provided by entries 'ViewerPreferences', 'PageLayout', 'PageMode' in the document catalog dictionary?-->
+        <!--Q: add info provided by entries 'Threads', 'Extensions', 'OpenAction', 'AA' etc in the document catalog dictionary?-->
+        <embeddedFiles>
+            <!--information about document embedded files-->
+            <embeddedFile id="file1">
+                <fileName>data.pdf</fileName>
+                <description>This file contains the additional data</description>
+                <subtype>application/pdf</subtype>
+                <filter>FlateDecode</filter>
+                <creationDate>2013-10-21T15:18:32.241</creationDate>
+                <modDate>2013-12-15T14:08:17.759</modDate>
+                <checkSum>01234567890123456789012345678901</checkSum>
+                <size>1234</size>
+            </embeddedFile>
+        </embeddedFiles>
+        <iccProfiles>
+            <!--information about document icc profiles-->
+            <iccProfile id="icc1">
+                <version>2.1.0</version>
+                <cmmType>type</cmmType>
+                <dataColorSpace>RGB</dataColorSpace>
+                <creator>The creator</creator>
+                <creationDate>1998-02-09T06:49:00.000</creationDate>
+                <defaultRenderingIntent>Perceptual</defaultRenderingIntent>
+                <copyright>The copyright</copyright>
+                <description>The description</description>
+                <profileId>1DF3DFD53876AB129CBA7D4A2</profileId>
+                <deviceModel>The model</deviceModel>
+                <deviceManufacturer>The manufacturer</deviceManufacturer>
+            </iccProfile>
+        </iccProfiles>
+        <outputIntents>
+            <!--information about document output intents-->
+        </outputIntents>
+        <outlines>
+            <!--information about bookmarks-->
+        </outlines>
+        <annotations>
+            <!--flat list of all the annotations in the document-->
+            <annotation id="annot1">
+                <!--detailed information about annotation like type, location, references to the annotation resources and other annotations used used by this annotation-->
+                <type/>
+                <location/>
+                <resources/>
+                <annotations/>
+            </annotation>
+            <annotation id="annot2">
+                <type/>
+                <location/>
+                <resources/>
+                <annotations/>
+            </annotation>
+        </annotations>
+        <pages>
+            <!--information about document pages including all the page resources-->
+            <page id="page1" orderNumber="1">
+                <mediaBox llx="0" lly="0" urx="600" ury="800"/>
+                <cropBox llx="0" lly="0" urx="600" ury="800"/>
+                <trimBox llx="0" lly="0" urx="600" ury="800"/>
+                <bleedBox llx="0" lly="0" urx="600" ury="800"/>
+                <artBox llx="0" lly="0" urx="600" ury="800"/>
+                <rotation>0</rotation>
+                <scaling>1</scaling>
+                <thumbnail>false</thumbnail>
+                <!--flat list of all the page resources (scanned recursively)-->
+                <resources>
+                    <graphicsStates>
+                        <graphicsState id="gs1"/>
+                    </graphicsStates>
+                    <colorSpaces>
+                        <colorSpace id="cs1"/>
+                        <colorSpace id="cs2"/>
+                        <colorSpace id="cs3"/>
+                    </colorSpaces>
+                    <fonts>
+                        <font id="f1"/>
+                        <font id="f2"/>
+                    </fonts>
+                    <images>
+                        <image id="im1"/>
+                    </images>
+                </resources>
+                <annotations>
+                    <annotation id="annot1"/>
+                    <annotation id="annot2"/>
+                </annotations>
+            </page>
+            <page id="page2" orderNumber="2">
+                <mediaBox llx="0" lly="0" urx="600" ury="800"/>
+                <cropBox llx="0" lly="0" urx="600" ury="800"/>
+                <trimBox llx="0" lly="0" urx="600" ury="800"/>
+                <bleedBox llx="0" lly="0" urx="600" ury="800"/>
+                <artBox llx="0" lly="0" urx="600" ury="800"/>
+                <rotation>0</rotation>
+                <scaling>1</scaling>
+                <thumbnail>false</thumbnail>
+                <!--flat list of all the page resources (scanned recursively)-->
+                <resources>
+                    <graphicsStates>
+                        <graphicsState id="gs1"/>
+                    </graphicsStates>
+                    <colorSpaces>
+                        <colorSpace id="cs4"/>
+                    </colorSpaces>
+                    <forms>
+                        <form id="form1"/>
+                    </forms>
+                    <fonts>
+                        <!--this font is used by graphics state with id 'gs1'-->
+                        <font id="f2"/>
+                    </fonts>
+                </resources>
+            </page>
+        </pages>
+        <!--flat list of all the document resources: graphic states, color spaces, images, XObjects (images and forms), patterns, shadings, fonts, procedure sets and properties dictionaries-->
+        <!--each resource contains the references to all the used resources (children) in the 'resources' section and references to resoruces and/or pages which use this resource (parents)-->
+        <!--unlike 'page' entry the references to children and parents only list immediate children and parents; it is easy to traverse the tree up and down using this referencing schema-->
+        <documentResources>
+            <graphicsStates>
+                <!--list of all graphics states used in the document-->
+                <graphicsState id="gs1">
+                    <parents>
+                        <!--if the immediate parent of the resource is page it means the resource is used in page content stream-->
+                        <page id="page1"/>
+                        <page id="page2"/>
+                        <form id="form1"/>
+                    </parents>
+                    <!--graphics state details include settings for transparency, overprints, fonts etc-->
+                    <transparency>false</transparency>
+                    <strokeAdjustment>true</strokeAdjustment>
+                    <overprintForStroke>true</overprintForStroke>
+                    <overprintForFill>false</overprintForFill>
+                    <!--the list of resources used by the graphics state-->
+                    <resources>
+                        <fonts>
+                            <font id="f2"/>
+                        </fonts>
+                    </resources>
+                </graphicsState>
+            </graphicsStates>
+            <colorSpaces>
+                <!--list of all color spaces used in the document; the description of each color space shall contain the details relevant for given color space family-->
+                <!--possible color space families: DeviceGray, DeviceRGB, DeviceCMYK, CalGray, CalRGB, Lab, ICCBased, Indexed, Pattern, Separation, DeviceN-->
+                <colorSpace id="cs1" family="DeviceRGB">
+                    <parents>
+                        <image id="im1"/>
+                    </parents>
+                </colorSpace>
+                <colorSpace id="cs2" family="Indexed">
+                    <parents>
+                        <page id="page1"/>
+                    </parents>
+                    <!--reference to the resource representing base color space-->
+                    <base id="cs1"/>
+                    <hival>255</hival>
+                    <lookup>000000 FF0000 00FF00...</lookup>
+                </colorSpace>
+                <colorSpace id="cs3" family="Separation">
+                    <parents>
+                        <page id="page1"/>
+                    </parents>
+                    <!--reference to the resource representing alternate color space-->
+                    <alternate id="cs1"/>
+                    <colorName>Link blue</colorName>
+                    <!--description of the color space values definition-->
+                    <valuesDefinition/>
+                </colorSpace>
+                <colorSpace id="cs4" family="ICCBased">
+                    <parents>
+                        <image id="page2"/>
+                        <form id="form1"/>
+                    </parents>
+                    <alternate id="cs1"/>
+                    <components>3</components>
+                    <!--ICCBased color space contains the reference to an ICC profile from 'iccProfiles' element-->
+                    <iccProfile id="icc1"/>
+                </colorSpace>
+            </colorSpaces>
+            <patterns>
+                <!--list of all patterns used in the document-->
+            </patterns>
+            <shadings>
+                <!--list of all shadings used in the document-->
+            </shadings>
+            <xobjects>
+                <!--list of all XObjects (images and forms) used in the document-->
+                <images>
+                    <!--list of all images used in the document-->
+                    <image id="im1">
+                        <parents>
+                            <page id="page1"/>
+                        </parents>
+                        <width>256</width>
+                        <height>256</height>
+                        <bitsPerComponent>8</bitsPerComponent>
+                        <imageMask>false</imageMask>
+                        <maskedImage>false</maskedImage>
+                        <filters>
+                            <filter>ASCIIHexDecode</filter>
+                            <filter>JBIG2Decode</filter>
+                        </filters>
+                        <resources>
+                            <colorSpaces>
+                                <colorSpace id="cs1"/>
+                            </colorSpaces>
+                        </resources>
+                        <metadata>
+                            <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="3.1.2-113">
+                             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                              <rdf:Description rdf:about=""
+                                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                xmlns:xap="http://ns.adobe.com/xap/1.0/"
+                                xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+                               dc:format="image/jpeg"
+                               xap:CreatorTool="Image tool"
+                               tiff:Orientation="1"
+                               tiff:XResolution="720000/10000"
+                               tiff:YResolution="720000/10000"
+                               tiff:ImageWidth="256"
+                               tiff:ImageLength="256">
+                               <dc:title>
+                                <rdf:Alt>
+                                 <rdf:li xml:lang="x-default">Test File.jpg</rdf:li>
+                                </rdf:Alt>
+                               </dc:title>
+                               <dc:description>
+                                <rdf:Alt>
+                                 <rdf:li xml:lang="x-default">Test file created in Image tool</rdf:li>
+                                </rdf:Alt>
+                               </dc:description>
+                               <dc:subject>
+                                <rdf:Bag>
+                                 <rdf:li>test</rdf:li>
+                                 <rdf:li>image</rdf:li>
+                                </rdf:Bag>
+                               </dc:subject>
+                              </rdf:Description>
+                             </rdf:RDF>
+                            </x:xmpmeta>
+                        </metadata>
+                    </image>
+                </images>
+                <forms>
+                    <!--list of all forms used in the document-->
+                    <form id="form1">
+                        <parents>
+                            <page id="page2"/>
+                        </parents>
+                        <bbox llx="121" lly="24" urx="168" ury="55"/>
+                        <matrix>1 0 0 1 0 0</matrix>
+                        <resources>
+                            <graphicsStates>
+                                <graphicsState id="gs1"/>
+                            </graphicsStates>
+                            <colorSpaces>
+                                <colorSpace id="cs4"/>
+                            </colorSpaces>
+                        </resources>
+                        <metadata/>
+                    </form>
+                </forms>
+            </xobjects>
+            <fonts>
+                <!--list of all fonts used in the document; the description of each font shall contain the details relevant for given font type-->
+                <font id="f1">
+                    <parents>
+                        <page id="page1"/>
+                    </parents>
+                    <subtype>Type1</subtype>
+                    <name>Helvetica-Bold-Font</name>
+                    <baseName>Helvetica-Bold</baseName>
+                    <firstChar>0</firstChar>
+                    <lastChar>255</lastChar>
+                    <widths>255 255 ... 380</widths>
+                    <encoding>StandardEncoding</encoding>
+                    <embedded>false</embedded>
+                    <subset>false</subset>
+                    <!--the font descriptor describing the font's metrics other then its glyph widths-->
+                    <fontDescriptor/>
+                </font>
+                <font id="f2" type="Type1">
+                    <parents>
+                        <page id="page1"/>
+                        <graphicsState id="gs1"/>
+                    </parents>
+                    <subtype>Type1</subtype>
+                    <name>Futura-Condenced-Font</name>
+                    <baseName>Futura-Condenced</baseName>
+                    <firstChar>0</firstChar>
+                    <lastChar>255</lastChar>
+                    <widths>255 255 ... 400</widths>
+                    <encoding>WinAnsiEncoding</encoding>
+                    <embedded>true</embedded>
+                    <subset>true</subset>
+                    <fontDescriptor/>
+                </font>
+            </fonts>
+            <procSets>
+                <!--list of all procedure sets used in the document-->
+                <procSet id="ps1"/>
+            </procSets>
+            <propertiesDicts>
+                <!--list of all properties dictionaries used in the document-->
+                <propertiesDict id="pd1"/>
+            </propertiesDicts>
+        </documentResources>
+    </pdfFeatures>
+</report>
