@@ -1,0 +1,47 @@
+---
+title: Definitive PDF/A verification
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include header.html %}
+
+<body role="document">
+   {% include navbar.html nav=site.data.navbar %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Phase 1 XML Examples</h1>
+            <p>These documents are working examples of the XML based files that will be used and produced by veraPDF.</p>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Machine Readable Report</div>
+            <div class="panel-body">
+                <p>XML data produced by the Conformance Checker components. Contains a PDF Features report and the results of validation, metadata fixing, and policy checking.</p>
+                <a href="MachineReadableReportExample.xml">MachineReadableReportExample.xml</a>
+            </div>
+        </div>    
+        <div class="panel panel-primary">
+            <div class="panel-heading">Validation Profile</div>
+            <div class="panel-body">
+                <p>XML format used for expressing validation rules for PDF/A Flavours.</p>
+                <a href="ValidationProfileExample.xml">ValidationProfileExample.xml</a>
+            </div>
+        </div>    
+        <div class="panel panel-primary">
+            <div class="panel-heading">Policy Profile</div>
+            <div class="panel-body">
+                <p>XML Schematron format used for expressing institutional policy.</p>
+                <a href="PolicyProfileExample.sch">PolicyProfileExample.sch</a>
+            </div>
+        </div>    
+        <div class="panel panel-primary">
+            <div class="panel-heading">Translation Resources</div>
+            <div class="panel-body">
+                <p>TMX files used to provide translations.</p>
+                <a href="translation-base.tmx">translation-base.tmx</a><br/>
+                <a href="translation-default.tmx">translation-default.tmx</a>
+            </div>
+        </div>    
+    </div>
+    {% include footer.html %}
+</body>
+</html>

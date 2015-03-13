@@ -1,13 +1,14 @@
 - title: "Home"
   href: "/"
 
-- title: "Phase One"
-  href: "/phase1/"
+- title: "UML Model"
+  href: "/uml-model/"
+
+- title: "Examples"
+  href: "/examples/"
   subcategories:
-    - subtitle: "UML Model"
-      subhref: "model/"
-    - subtitle: "Examples"
-      subhref: "examples/"
+    - subtitle: "Phase One"
+      subhref: "phase1/"
 
 - title: "Site"
   href: "/site/"
