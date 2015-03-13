@@ -16,3 +16,12 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+.navbar-brand {
+    padding: 0px 15px;
+    margin: 0px;
+}
+
+.navbar-brand img {
+    height: 50px;
+}

@@ -1,6 +1,19 @@
-- text: Home
-  url: /
-- text: GitHub
-  url: /github/
-- text: BootStrap
-  url: /bootstrap/
+- title: "Home"
+  href: "/"
+
+- title: "Phase One"
+  href: "/phase1/"
+  subcategories:
+    - subtitle: "UML Model"
+      subhref: "model/"
+    - subtitle: "Examples"
+      subhref: "examples/"
+
+- title: "Site"
+  href: "/site/"
+  subcategories:
+    - subtitle: "GitHub Pages"
+      subhref: "pages/"
+    - subtitle: "Bootstrap"
+      subhref: "bootstrap/"
+
