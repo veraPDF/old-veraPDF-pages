@@ -4,3 +4,5 @@ _site
 # Ignore Ruby Gem stuff for now, only required for local Jekyll.
 Gemfile
 Gemfile.lock
+
+*.sublime-*
